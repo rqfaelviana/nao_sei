@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>( ͡° ͜ʖ ͡°)</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <!-- Tela inicial -->
+
+      <section class="card" id="tela-inicial">
+        <h1>Ta livre pra sair essa semana?</h1>
+
+        <div class="botoes">
+          <button id="botao-sim" type="button">Sim</button>
+
+          <button id="botao-nao" type="button">Não</button>
+        </div>
+      </section>
+
+      <!-- Tela de data -->
+
+      <section class="card escondida" id="tela-data">
+        <h1>Escolha um dia</h1>
+
+        <label for="data-encontro"> Qual dia fica melhor para você? </label>
+
+        <input type="date" id="data-encontro" />
+
+        <div class="acoes">
+          <button class="botao-voltar" id="voltar-inicio" type="button">
+            Voltar
+          </button>
+
+          <button id="botao-continuar" type="button">Continuar</button>
+        </div>
+      </section>
+
+      <!-- Tela de horário -->
+
+      <section class="card escondida" id="tela-horario">
+        <h1>Escolha o horário</h1>
+
+        <label for="horario-encontro">
+          Qual horário fica melhor para você?
+        </label>
+
+        <select id="horario-encontro">
+          <option value="">Selecione um horário</option>
+        </select>
+
+        <div class="acoes">
+          <button class="botao-voltar" id="voltar-data" type="button">
+            Voltar
+          </button>
+
+          <button id="botao-continuar-horario" type="button">Continuar</button>
+        </div>
+      </section>
+
+      <!-- Tela de comida -->
+
+      <section class="card escondida" id="tela-comida">
+        <h1>O que você quer comer?</h1>
+
+        <div class="opcoes-comida">
+          <button class="opcao-comida" data-comida="Hambúrguer" type="button">
+            🍔 Hambúrguer
+          </button>
+
+          <button class="opcao-comida" data-comida="Pizza" type="button">
+            🍕 Pizza
+          </button>
+
+          <button class="opcao-comida" data-comida="Sushi" type="button">
+            🍣 Sushi
+          </button>
+
+          <button
+            class="opcao-comida"
+            data-comida="Comida italiana"
+            type="button"
+          >
+            🍝 Comida italiana
+          </button>
+        </div>
+
+        <button class="botao-voltar" id="voltar-horario" type="button">
+          Voltar
+        </button>
+      </section>
+
+      <!-- Tela final -->
+
+      <section class="card escondida" id="tela-final">
+        <h1>Está marcado! </h1>
+
+        <div class="resumo">
+          <p>
+            <strong>Data:</strong>
+            <span id="resumo-data"></span>
+          </p>
+
+          <p>
+            <strong>Horário:</strong>
+            <span id="resumo-horario"></span>
+          </p>
+
+          <p>
+            <strong>Comida:</strong>
+            <span id="resumo-comida"></span>
+          </p>
+        </div>
+
+        <p class="mensagem-final">Agora não tem mais volta 😌</p>
+
+        <button id="botao-whatsapp" type="button">
+          Enviar confirmação pelo WhatsApp
+        </button>
+      </section>
+    </main>
+    <audio id="musica-fundo" loop preload="auto">
+      <source src="music.mp3" type="audio/mpeg" />
+      Seu navegador não suporta áudio.
+    </audio>
+
+    <button
+      class="controle-musica escondida"
+      id="controle-musica"
+      type="button"
+      aria-label="Pausar música"
+      title="Pausar música"
+    >
+      🔊
+    </button>
+
+    <script src="script.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
